@@ -15,6 +15,11 @@
 		0B0B63B922EAD7ED00EEF6D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B63B822EAD7ED00EEF6D5 /* main.m */; };
 		0B0B63C322EAD7ED00EEF6D5 /* QJDlibFaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B63C222EAD7ED00EEF6D5 /* QJDlibFaceTests.m */; };
 		0B0B63CE22EAD7ED00EEF6D5 /* QJDlibFaceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B63CD22EAD7ED00EEF6D5 /* QJDlibFaceUITests.m */; };
+		0B0B63DE22EAD83400EEF6D5 /* shape_predictor_68_face_landmarks.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0B0B63DC22EAD83300EEF6D5 /* shape_predictor_68_face_landmarks.dat */; };
+		0B0B63DF22EAD83400EEF6D5 /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0B63DD22EAD83400EEF6D5 /* libdlib.a */; };
+		0B0B63E222EAD89400EEF6D5 /* DlibWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B63E022EAD89400EEF6D5 /* DlibWrapper.mm */; };
+		0B0B63E522EAD8F100EEF6D5 /* SessionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B63E422EAD8F100EEF6D5 /* SessionHandler.m */; };
+		0B0B63E822EAD9B400EEF6D5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0B63E722EAD9B400EEF6D5 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,13 @@
 		0B0B63C922EAD7ED00EEF6D5 /* QJDlibFaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QJDlibFaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0B63CD22EAD7ED00EEF6D5 /* QJDlibFaceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QJDlibFaceUITests.m; sourceTree = "<group>"; };
 		0B0B63CF22EAD7ED00EEF6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B0B63DC22EAD83300EEF6D5 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
+		0B0B63DD22EAD83400EEF6D5 /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdlib.a; sourceTree = "<group>"; };
+		0B0B63E022EAD89400EEF6D5 /* DlibWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DlibWrapper.mm; sourceTree = "<group>"; };
+		0B0B63E122EAD89400EEF6D5 /* DlibWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DlibWrapper.h; sourceTree = "<group>"; };
+		0B0B63E322EAD8F100EEF6D5 /* SessionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionHandler.h; sourceTree = "<group>"; };
+		0B0B63E422EAD8F100EEF6D5 /* SessionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionHandler.m; sourceTree = "<group>"; };
+		0B0B63E722EAD9B400EEF6D5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0B63E822EAD9B400EEF6D5 /* Accelerate.framework in Frameworks */,
+				0B0B63DF22EAD83400EEF6D5 /* libdlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 				0B0B63C122EAD7ED00EEF6D5 /* QJDlibFaceTests */,
 				0B0B63CC22EAD7ED00EEF6D5 /* QJDlibFaceUITests */,
 				0B0B63A722EAD7EB00EEF6D5 /* Products */,
+				0B0B63E622EAD9B400EEF6D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,8 +116,13 @@
 		0B0B63A822EAD7EB00EEF6D5 /* QJDlibFace */ = {
 			isa = PBXGroup;
 			children = (
+				0B0B63DB22EAD82800EEF6D5 /* lib */,
 				0B0B63A922EAD7EB00EEF6D5 /* AppDelegate.h */,
 				0B0B63AA22EAD7EB00EEF6D5 /* AppDelegate.m */,
+				0B0B63E122EAD89400EEF6D5 /* DlibWrapper.h */,
+				0B0B63E022EAD89400EEF6D5 /* DlibWrapper.mm */,
+				0B0B63E322EAD8F100EEF6D5 /* SessionHandler.h */,
+				0B0B63E422EAD8F100EEF6D5 /* SessionHandler.m */,
 				0B0B63AC22EAD7EB00EEF6D5 /* ViewController.h */,
 				0B0B63AD22EAD7EB00EEF6D5 /* ViewController.m */,
 				0B0B63AF22EAD7EB00EEF6D5 /* Main.storyboard */,
@@ -130,6 +150,23 @@
 				0B0B63CF22EAD7ED00EEF6D5 /* Info.plist */,
 			);
 			path = QJDlibFaceUITests;
+			sourceTree = "<group>";
+		};
+		0B0B63DB22EAD82800EEF6D5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0B0B63DD22EAD83400EEF6D5 /* libdlib.a */,
+				0B0B63DC22EAD83300EEF6D5 /* shape_predictor_68_face_landmarks.dat */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		0B0B63E622EAD9B400EEF6D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B0B63E722EAD9B400EEF6D5 /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +275,7 @@
 				0B0B63B622EAD7ED00EEF6D5 /* LaunchScreen.storyboard in Resources */,
 				0B0B63B322EAD7ED00EEF6D5 /* Assets.xcassets in Resources */,
 				0B0B63B122EAD7EB00EEF6D5 /* Main.storyboard in Resources */,
+				0B0B63DE22EAD83400EEF6D5 /* shape_predictor_68_face_landmarks.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0B63AE22EAD7EB00EEF6D5 /* ViewController.m in Sources */,
+				0B0B63E522EAD8F100EEF6D5 /* SessionHandler.m in Sources */,
 				0B0B63B922EAD7ED00EEF6D5 /* main.m in Sources */,
+				0B0B63E222EAD89400EEF6D5 /* DlibWrapper.mm in Sources */,
 				0B0B63AB22EAD7EB00EEF6D5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,10 +477,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86R4V3XFLU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DLIB_JPEG_SUPPORT,
+					DLIB_NO_GUI_SUPPORT,
+					NDEBUG,
+					DLIB_USE_BLAS,
+					DLIB_USE_LAPACK,
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/QJDlibFace/lib/\"";
 				INFOPLIST_FILE = QJDlibFace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QJDlibFace/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gengmei.QJDlibFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,10 +507,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86R4V3XFLU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DLIB_JPEG_SUPPORT,
+					DLIB_NO_GUI_SUPPORT,
+					NDEBUG,
+					DLIB_USE_BLAS,
+					DLIB_USE_LAPACK,
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/QJDlibFace/lib/\"";
 				INFOPLIST_FILE = QJDlibFace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QJDlibFace/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gengmei.QJDlibFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
